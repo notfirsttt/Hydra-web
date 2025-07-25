@@ -1,6 +1,12 @@
 {
+  "name": "project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
+    "aos": "^2.3.4",
     "tailwindcss": "^4.1.11"
   }
 }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
     <style>
         /* Menambahkan efek fade-out untuk loader setelah halaman dimuat */
@@ -54,7 +55,7 @@
     </style>
 </head>
 
-<body class="bg-gray-50 flex justify-center items-center min-h-screen">
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
 
     <!-- Loader Spinner with Loading Text -->
     <div id="loader" class="hidden">
@@ -66,11 +67,11 @@
 
     <!-- Konten Halaman yang disembunyikan di awal -->
     <div id="content" class="hidden">
-        <nav class="flex justify-between container mx-auto mt-10">
+        <nav class="flex justify-between container mx-auto mt-10 animate__animated animate__fadeInDown">
             <nav class="flex items-center">
                 <h1 class="text-3xl font-extrabold">Hydra</h1>
             </nav>
-            <nav class="flex ml-[-30rem]">
+            <nav class="flex ml-[-30rem] animate__animated animate__fadeInDown ">
                 <ul class="flex gap-7 text-xl text-gray-500 items-center">
                     <li><a href="">Home</a></li>
                     <li><a href="">Servics</a></li>
@@ -90,7 +91,7 @@
             </nav>
         </nav>
         <div class="grid grid-cols-12 mt-[15rem]">
-            <div class="col-span-8 ml-[8rem]">
+            <div class="col-span-8 ml-[8rem] animate__animated animate__fadeInLeft">
                 <h1 class="text-8xl font-bold">Searching for a Star?</h1>
                 <h1
                     class="text-8xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-teal-300 text-transparent bg-clip-text my-5">
@@ -101,30 +102,59 @@
                     class="bg-purple-950 text-2xl font-medium py-4 px-9 cursor-pointer rounded-4xl text-white flex mt-6">Let's
                     Build Together!</button>
             </div>
-            <div class="grid col-span-4">
+            <div class="grid col-span-4 animate__animated animate__fadeInRight">
                 <img class="w-[900px] h-[600px]" src="../publick/image/roket.png" alt="">
             </div>
         </div>
-        <div>i</div>
+        <div class="container flex bg-white mx-auto h-[18rem] mt-[10rem] justify-center pt-8 rounded-4xl"
+            data-aos="zoom-in">
+            <div>
+                <h1 class="flex text-purple-600 text-2xl font-bold">AWESOME COMPANIES WE
+                    WORK WITH</h1>
+            </div>
+        </div>
+        <!-- askj -->
+        <div class="felx ">
+            <div class="flex justify-center mt-[8rem]">
+                <h1 data-aos="fade-up" class="flex text-purple-600 mb-5 text-4xl font-medium">WHY HYRE</h1>
+            </div>
+            <div>
+                <h1 class="flex text-8xl font-bold justify-center mb-5 ">
+                    This is How We</h1>
+            </div>
+            <div>
+                <h1
+                    class="flex pb-6 justify-center mb-5 text-8xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-teal-300 text-transparent bg-clip-text my-5">
+                    Get Things Done</h1>
+            </div>
+            <div>
+                <p class="text-2xl mt-5 text-gray-500 flex justify-center text-center mb-10">We work with the most
+                    innovative
+                    companies,
+                    adding a fresh
+                    approach to the hiring strategy. <br> Building and scaling teams? That's what we do best!</p>
+            </div>
+        </div>
+        <div class="container grid grid-cols-12 gap-[20px]">
+            <div class="flex mx-auto border col-span-4 border-amber-200">
+                <div>
+                    <h1 class="h-[100px] w-auto">ai</h1>
+                </div>
+            </div>
+            <div class="flex mx-auto col-span-4 border-amber-600">
+                <div>
+                    <h1 class="h-[100px] w-auto">ai</h1>
+                </div>
+            </div>
+            <div class="flex mx-auto col-span-4 border-amber-800">
+                <div>
+                    <h1 class="h-[100px] w-auto">ai</h1>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <script>
-        // Menampilkan loader saat halaman dimuat
-        window.addEventListener('load', () => {
-            // Sembunyikan loader dan tampilkan konten setelah 2 detik
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('content');
-
-            // Menunggu 2 detik sebelum menghilangkan loader dan menampilkan konten
-            setTimeout(() => {
-                // Tambahkan kelas loader-hidden untuk efek fade-out pada loader
-                loader.classList.add('loader-hidden');
-                // Menambahkan kelas hidden untuk benar-benar menyembunyikan loader
-                loader.classList.add('hidden');
-                content.classList.remove('hidden');
-            }, 2000); // Waktu delay 2 detik
-        });
-    </script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
