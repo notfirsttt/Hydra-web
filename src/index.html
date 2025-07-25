@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        /* Menambahkan efek fade-out untuk loader setelah halaman dimuat */
+        .loader-hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        /* Styling untuk spinner dan teks loading */
+        #loader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #loader-text {
+            position: absolute;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .loader-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 8px solid transparent;
+            border-top: 8px solid blue;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 flex justify-center items-center min-h-screen">
+
+    <!-- Loader Spinner with Loading Text -->
+    <div id="loader" class="hidden">
+        <div class="loader-container"></div>
+        <div id="loader-text">
+            <h1 class="text-xs text-black">Loading...</h1>
+        </div>
+    </div>
+
+    <!-- Konten Halaman yang disembunyikan di awal -->
+    <div id="content" class="hidden">
+        <nav class="flex justify-between container mx-auto mt-10">
+            <nav class="flex items-center">
+                <h1 class="text-3xl font-extrabold">Hydra</h1>
+            </nav>
+            <nav class="flex ml-[-30rem]">
+                <ul class="flex gap-7 text-xl text-gray-500 items-center">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Servics</a></li>
+                    <li><a href="">Our Work</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
+            <nav class="flex gap-7 items-center justify-center">
+                <button
+                    class="border border-black text-2xl font-medium py-2 cursor-pointer px-7 rounded-4xl">Login</button>
+                <button
+                    class="bg-purple-950 text-2xl font-medium py-2 px-7 cursor-pointer rounded-4xl text-white">Contact
+                    Us</button>
+                <button
+                    class="bg-white text-2xl font-medium py-2 cursor-pointer px-7 rounded-4xl text-black">EN</button>
+            </nav>
+        </nav>
+        <div class="grid grid-cols-12 mt-[15rem]">
+            <div class="col-span-8 ml-[8rem]">
+                <h1 class="text-8xl font-bold">Searching for a Star?</h1>
+                <h1
+                    class="text-8xl font-bold bg-gradient-to-r from-purple-600 via-blue-400 to-teal-300 text-transparent bg-clip-text my-5">
+                    We Got You.</h1>
+                <p class="text-2xl mt-5 text-gray-500">Hyre is a digitally-driven recruitment agency that blends
+                    in-house and agency recruiting know-how to find the perfect fit for your team.</p>
+                <button
+                    class="bg-purple-950 text-2xl font-medium py-4 px-9 cursor-pointer rounded-4xl text-white flex mt-6">Let's
+                    Build Together!</button>
+            </div>
+            <div class="grid col-span-4">
+                <img class="w-[900px] h-[600px]" src="../publick/image/roket.png" alt="">
+            </div>
+        </div>
+        <div>haii</div>
+    </div>
+
+    <script>
+        // Menampilkan loader saat halaman dimuat
+        window.addEventListener('load', () => {
+            // Sembunyikan loader dan tampilkan konten setelah 2 detik
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('content');
+
+            // Menunggu 2 detik sebelum menghilangkan loader dan menampilkan konten
+            setTimeout(() => {
+                // Tambahkan kelas loader-hidden untuk efek fade-out pada loader
+                loader.classList.add('loader-hidden');
+                // Menambahkan kelas hidden untuk benar-benar menyembunyikan loader
+                loader.classList.add('hidden');
+                content.classList.remove('hidden');
+            }, 2000); // Waktu delay 2 detik
+        });
+    </script>
+</body>
+
+</html>
