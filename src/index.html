@@ -7,6 +7,7 @@
     <link href="./output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         /* Menambahkan efek fade-out untuk loader setelah halaman dimuat */
         .loader-hidden {
@@ -90,7 +91,7 @@
                     class="bg-white text-2xl font-medium py-2 cursor-pointer px-7 rounded-4xl text-black">EN</button>
             </nav>
         </nav>
-        <div class="grid grid-cols-12 mt-[15rem]">
+        <div class="grid grid-cols-12 mt-[8rem]">
             <div class="col-span-8 ml-[8rem] animate__animated animate__fadeInLeft">
                 <h1 class="text-8xl font-bold">Searching for a Star?</h1>
                 <h1
@@ -128,14 +129,15 @@
                     Get Things Done</h1>
             </div>
             <div>
-                <p class="text-2xl mt-5 text-gray-500 flex justify-center text-center mb-10">We work with the most
+                <p data-aos="fade-right" class="text-2xl mt-5 text-gray-500 flex justify-center text-center mb-10">We
+                    work with the most
                     innovative
                     companies,
                     adding a fresh
                     approach to the hiring strategy. <br> Building and scaling teams? That's what we do best!</p>
             </div>
         </div>
-        <div class="container grid grid-cols-12 gap-[20px]">
+        <div class="container grid grid-cols-12 gap-[20px] h-[100vh]">
             <div class="flex mx-auto border col-span-4 border-amber-200">
                 <div>
                     <h1 class="h-[100px] w-auto">ai</h1>
@@ -154,6 +156,10 @@
         </div>
     </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="script.js"></script>
 </body>
 
